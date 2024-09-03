@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "allowed.origins",
+    "type": "java.lang.String",
+    "description": "Propiedad para la variable de entorno que controlara el CORS."
+  },
+  {
+    "name": "secrets.keys",
+    "type": "java.lang.String",
+    "description": "Propiedad para la variable de entorno que se usara para la clave secreta."
+  }
+]}

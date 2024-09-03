@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    environment:
+      URL_FORO_DATABASE: jdbc:mysql://mysql:3306/foro
+      DB_USER: root
+      DB_PASS: 0101
+      CORS_URL: http://localhost:3000
+      SECRET_KEY: AD5cjtmXfj70UT2KOIn04zUIL5uSqBn37b8pfwGT1xxeN8myMynfKztzXs8pwEJYUOr0iwgeZBfZZYFVD2vusEi0VgwND9YXfWoU
+
+  mysql:
+    image: mysql
+    restart: always
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: foro
+      MYSQL_ROOT_PASSWORD: 0101
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
+    driver: local
