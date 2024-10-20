@@ -40,7 +40,7 @@ _Some of the features incluides:_
 
 ## Frontend
 
-Here is the repository to my fronted in React
+Here is the repository to my fronted in React [Postik Frontend](https://github.com/classTemporal/postik-frontend)
 
 ## Environment
 
